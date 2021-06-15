@@ -5,8 +5,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test-A": "./node_modules/.bin/mocha --config .mocharc-A.cjs -P ./tsconfig.json",
-    "test-B": "./node_modules/.bin/mocha --config .mocharc-B.cjs -P ./tsconfig.json"
+    "test-A": "./node_modules/.bin/ts-mocha --config .mocharc-A.cjs -P ./tsconfig.json",
+    "test-B": "./node_modules/.bin/ts-mocha --config .mocharc-B.cjs -P ./tsconfig.json",
+    "test-C": "./node_modules/.bin/ts-mocha --config .mocharc-C.cjs -P ./tsconfig.json",
+    "test-D": "./node_modules/.bin/ts-mocha --config .mocharc-D.cjs -P ./tsconfig.json"
   },
   "dependencies": {
     "@babylonjs/core": "4.2.0",

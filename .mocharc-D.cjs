@@ -2,10 +2,9 @@ module.exports = {
 	diff: true,
 	extension: ['js','ts'],
 	spec: [
-		'./tests/case-A.spec.ts'
+		'./tests/case-D.spec.*'
 	],
-	//loader: 'ts-node/esm',
-	require: 'ts-node/register',
+	loader: 'ts-node/esm',
 	'watch-files': [
 		'src',
 		'tests'
