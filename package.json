@@ -5,7 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --config .mocharc.cjs -P ./tsconfig.json"
+    "test-A": "./node_modules/.bin/mocha --config .mocharc-A.cjs -P ./tsconfig.json",
+    "test-B": "./node_modules/.bin/mocha --config .mocharc-B.cjs -P ./tsconfig.json"
   },
   "dependencies": {
     "@babylonjs/core": "4.2.0",

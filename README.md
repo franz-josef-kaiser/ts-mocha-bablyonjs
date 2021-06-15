@@ -3,5 +3,9 @@
 Run the tests:
 
 ```shell
-$ npm run tests
+# Run test case A
+$ npm run tests-A
+
+# Run test case B
+$ npm run tests-B
 ```

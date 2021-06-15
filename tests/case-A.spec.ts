@@ -1,7 +1,7 @@
 import * as chai from 'chai';
 const { expect } = chai
 import { describe, before, it } from 'mocha';
-
+/** CASE A **/
 /* 1) "SyntaxError: Named export 'Camera' not found. The requested module '@babylonjs/core/Cameras/camera.js'
 	     is a CommonJS module, which may not support all module.exports as named exports.
 
@@ -11,11 +11,6 @@ import { describe, before, it } from 'mocha';
 	     const { Camera } = pkg;
  */
 import { Camera } from '@babylonjs/core/Cameras/camera.js';
-
-/* 2) "SyntaxError: Cannot use import statement outside a module" */
-//import camera from '@babylonjs/core/Cameras/camera.js';
-//const { Camera } = camera;
-
 
 describe('Self sustained', () => {
 	// Test to confirm that tests work.
