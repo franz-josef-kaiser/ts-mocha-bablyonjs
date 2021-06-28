@@ -1,21 +1,24 @@
 {
-  "name": "demo/ts-mocha-babylonjs",
+  "name": "ts-mocha-babylonjs",
   "description": "Demo import of BabylonJS files into Mocha specs.",
   "version": "0.1.0",
   "license": "MIT",
-  "type": "module",
+  "engines": {
+    "node": ">=12.22.0"
+  },
   "scripts": {
-    "test-A": "./node_modules/.bin/ts-mocha --config .mocharc-A.cjs -P ./tsconfig.json",
-    "test-B": "./node_modules/.bin/ts-mocha --config .mocharc-B.cjs -P ./tsconfig.json",
-    "test-C": "./node_modules/.bin/ts-mocha --config .mocharc-C.cjs -P ./tsconfig.json",
-    "test-D": "./node_modules/.bin/ts-mocha --config .mocharc-D.cjs -P ./tsconfig.json"
+    "README-L#0": "This mocha demo only runs because of instant-mocha.",
+    "README-L#1": "The problem with all other solutions is that BabylonJS exports ES6 imports.",
+    "README-L#2": "If you read this, look at `are-you-es5` pkg output, fix it and send a PR. Thanks in advance!",
+    "README-L#3": "Hint: The problem could maybe get solved by excluding BabylonJS from transpiling, see `non_ES5_node_modules` Regex.",
+    "test": "./node_modules/.bin/instant-mocha --webpack-config webpack.config.ts lib/**/*.spec.*",
+    "postinstall": "sh -c \"yarn are-you-es5 check -r . | tail -n 3 > ./non_ES5_node_modules \""
   },
   "dependencies": {
     "@babylonjs/core": "4.2.0",
     "@babylonjs/inspector": "4.2.0",
     "@babylonjs/loaders": "4.2.0",
-    "@babylonjs/materials": "4.2.0",
-    "esm": "*"
+    "@babylonjs/materials": "4.2.0"
   },
   "devDependencies": {
     "@babylonjs/core": "4.2.0",
@@ -26,13 +29,15 @@
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.12.2",
     "@types/sinon": "^10.0.2",
+    "are-you-es5": "^2.1.1",
     "chai": "^4.3.4",
-    "esm": "^3.2.25",
-    "mocha": "^8.4.0",
+    "instant-mocha": "^1.2.1",
     "sinon": "^11.1.1",
     "ts-loader": "^6.2.2",
-    "ts-mocha": "^8.0.0",
     "ts-node": "^10.0.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "webpack": "^5.41.0",
+    "webpack-cli": "^4.7.2",
+    "yarn": "^1.22.10"
   }
 }

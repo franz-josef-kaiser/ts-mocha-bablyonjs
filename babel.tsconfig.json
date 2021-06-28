@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"outDir": "./tests",
+		"rootDir": "./tests",
+		"noEmit": true
+	},
+	"include": [
+		"tests/index.spec.ts",
+		"node_modules/@babylonjs"
+	]
+}
